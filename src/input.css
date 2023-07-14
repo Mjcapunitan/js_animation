@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    @apply max-w-[120rem] mx-auto p-[1.5rem] w-full
+}
+
+@layer components {
+    .header {
+        @apply bg-blue-700 fixed w-full
+    }
+
+    .header.active {
+        @apply bg-red-500
+    }
+
+    .header .header__nav {
+        @apply hidden
+    }
+
+    .header .header__wrapper {
+        @apply flex items-center justify-between
+    }
+
+    .header .toggle__menu {
+        @apply flex flex-col gap-[.3rem]
+    }
+
+    .header .toggle__menu span{
+        @apply w-[2rem] h-[.2rem] bg-white block rounded-full
+    }
+
+
+
+    .banner{
+        @apply bg-tokyo h-[100vh] w-[100vw] bg-cover
+    }
+
+
+
+
+    .batches .batches__tab ul {
+        @apply bg-red-500 flex justify-between py-[3rem]
+    }
+
+    .batches .batches__tab ul li a {
+        @apply text-white p-[1rem]
+    }
+
+    .batches .batches__tab ul li.active {
+        @apply bg-violet-600
+
+    }
+
+
+
+    .batches .batches__content {
+        @apply relative
+    }
+
+    .batches .batches__tab__content {
+        @apply flex gap-[5rem] items-center absolute right-[0rem] opacity-0 ease-in-out duration-[.5s]
+    }
+    
+    .batches .batches__tab__content.active {
+        @apply opacity-[1] right-[5rem] ease-in-out duration-[.5s]
+    }
+
+    .batches .batches__tab ul.pink {
+        @apply  bg-pink-950
+    }
+
+
+    .batches .batches__tab__content img {
+        @apply max-w-[10rem] max-h-[20rem]
+    }
+
+    .batches .batches__trainee__desc h1 {
+        @apply text-[1.5rem] font-bold
+    }
+
+    .batches .batches__trainee__desc h2 {
+        @apply text-[1.2rem]
+    }
+}
